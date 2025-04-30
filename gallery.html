@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - MNP HOTELS</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f5f5f5; color: #333; }
+    header, footer { background-color: #1e3a8a; color: white; text-align: center; padding: 1em; }
+    main { padding: 2em; max-width: 1000px; margin: 0 auto; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    h1 { color: #1e3a8a; }
+    .back-button {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      background-color: #1e3a8a;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .gallery img { width: 100%; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Photo Gallery</h1>
+  </header>
+
+  <main>
+    <a href="home.html" class="back-button">← Back to Home</a>
+    <div class="gallery">
+      <img src="https://images.pexels.com/photos/2034335/pexels-photo-2034335.jpeg" alt="Lobby">
+      <img src="https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg" alt="Pool">
+      <img src="https://images.pexels.com/photos/373883/pexels-photo-373883.jpeg" alt="Dining Area">
+      <img src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg" alt="Gym">
+      <img src="https://images.pexels.com/photos/262048/pexels-photo-262048.jpeg" alt="Deluxe Room">
+      <img src="https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg" alt="Pool Area">
+      <img src="https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg" alt="Reception Area">
+      <img src="https://images.pexels.com/photos/210604/pexels-photo-210604.jpeg" alt="Suite Interior">
+      <img src="https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg" alt="Hotel Exterior">
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 MNP HOTELS
+  </footer>
+</body>
+</html>

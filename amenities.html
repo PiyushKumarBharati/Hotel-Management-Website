@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amenities - MNP HOTELS</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f5f5f5; color: #333; }
+    header, footer {
+      background-color: #1e3a8a;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+    main {
+      padding: 2em;
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #1e3a8a;
+    }
+    .amenity {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 30px;
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .amenity img {
+      width: 120px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .back-button {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      background-color: #1e3a8a;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .back-button:hover {
+      background-color: #3b5998;
+    }
+    .highlight {
+      background-color: yellow;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hotel Amenities</h1>
+  </header>
+
+  <main>
+    <a href="home.HTML" class="back-button">← Back to Home</a>
+    <h2>Included With Your Stay</h2>
+
+    <div class="amenity">
+      <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg" alt="Wi-Fi">
+      <div>Complimentary high-speed Wi-Fi</div>
+    </div>
+
+    <div class="amenity">
+      <img src="https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg" alt="Room Service">
+      <div>24-hour room service</div>
+    </div>
+
+    <div class="amenity">
+      <img src="https://images.pexels.com/photos/4662438/pexels-photo-4662438.jpeg" alt="Fitness Center">
+      <div>Fitness center and yoga studio</div>
+    </div>
+
+    <div class="amenity">
+      <img src= "https://images.pexels.com/photos/261169/pexels-photo-261169.jpeg" alt="Pool and Spa">
+      <div>Swimming pool and spa access</div>
+    </div>
+
+    <div class="amenity">
+      <img src="https://images.pexels.com/photos/2029663/pexels-photo-2029663.jpeg" alt="Concierge">
+      <div>Concierge and travel desk</div>
+    </div>
+    
+    <div class="amenity">
+      <img src=https://th.bing.com/th/id/OIP.B0DVSMSkTBX_C1kols7_2AHaJ4?rs=1&pid=ImgDetMain alt="Shuttle">
+      <div>Airport shuttle service</div>
+    </div>
+    
+    <div class="amenity">
+      <img src="https://images.pexels.com/photos/5591460/pexels-photo-5591460.jpeg" alt="Dry Cleaning">
+      <div>Laundry and dry-cleaning services</div>
+    </div>
+    
+    <div class="amenity">
+      <img src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg" alt="Bussiness meeting Room">
+      <div>Business center and meeting rooms</div>
+    </div>
+    
+  </main>
+
+  <footer>
+    &copy; 2025 MNP HOTELS
+  </footer>
+
+  <script>
+
+    document.querySelectorAll('.amenity').forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        item.style.backgroundColor = '#e0f0ff';
+      });
+      item.addEventListener('mouseleave', () => {
+        item.style.backgroundColor = '#f9f9f9';
+      });
+    });
+
+    document.querySelectorAll('.amenity div').forEach(text => {
+      text.addEventListener('click', () => {
+        text.classList.toggle('highlight');
+      });
+    });
+  </script>
+</body>
+</html>

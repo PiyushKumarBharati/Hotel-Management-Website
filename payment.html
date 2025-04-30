@@ -1,0 +1,16 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <title>Payment - MNP HOTELS</title> <style> body { font-family: Arial, sans-serif; margin: 0; background: #f5f5f5; color: #333; } header, footer { background-color: #1e3a8a; color: white; text-align: center; padding: 1em; } main { max-width: 600px; margin: 2em auto; background: white; border-radius: 10px; padding: 2em; box-shadow: 0 2px 8px rgba(0,0,0,0.1); } h1 { text-align: center; color: #1e3a8a; } .summary { margin-bottom: 20px; background: #f0f8ff; padding: 1em; border-radius: 8px; } .summary h3 { margin: 0 0 10px 0; } label { font-weight: bold; margin-top: 10px; display: block; } input, select, button { padding: 10px; width: 100%; font-size: 1em; margin-bottom: 1em; border: 1px solid #ccc; border-radius: 5px; } button { background-color: #1e3a8a; color: white; border: none; cursor: pointer; } button:hover { background-color: #3b82f6; } </style> </head> <body> <header> <h1>Payment</h1> </header> <main> <div class="summary"> <h3>Booking Summary</h3> <p><strong>Name:</strong> <span id="summaryName"></span></p> <p><strong>Email:</strong> <span id="summaryEmail"></span></p> <p><strong>Location:</strong> <span id="summaryLocation"></span></p> <p><strong>Room Type:</strong> <span id="summaryRoom"></span></p> <p><strong>Total Price:</strong> ₹<span id="summaryPrice"></span></p> </div>
+    <form onsubmit="handlePayment(event)">
+        <label for="paymentMethod">Choose Payment Method</label>
+        <select id="paymentMethod" required>
+          <option value="">Select</option>
+          <option value="Credit Card">Credit/Debit Card</option>
+          <option value="UPI">UPI</option>
+          <option value="Net Banking">Net Banking</option>
+        </select>
+      
+        <label for="paymentDetails">Enter Payment Details</label>
+        <input type="text" id="paymentDetails" placeholder="Enter UPI ID or Card Number" required />
+      
+        <button type="submit">Pay</button>
+      </form>
+    </main> <footer> &copy; 2025 MNP HOTELS </footer> <script> const booking = JSON.parse(localStorage.getItem("MNP_booking")); if (booking) { document.getElementById("summaryName").textContent = booking.name; document.getElementById("summaryEmail").textContent = booking.email; document.getElementById("summaryLocation").textContent = booking.location; document.getElementById("summaryRoom").textContent = booking.roomType; document.getElementById("summaryPrice").textContent = booking.price; } function handlePayment(e) { e.preventDefault(); const method = document.getElementById("paymentMethod").value; const details = document.getElementById("paymentDetails").value.trim(); if (!method || !details) { alert("Please fill all payment fields."); return; } alert("Booking Confirmed! A confirmation email has been sent to " + booking.email + "."); localStorage.removeItem("MNP_booking"); window.location.href = "home.HTML"; } </script> </body> </html>      
