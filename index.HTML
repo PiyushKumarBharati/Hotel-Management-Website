@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MNP HOTELS</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+      color: white;
+      padding: 30px 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      text-align: center;
+      letter-spacing: 2px;
+    }
+    nav {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 15px;
+      border-radius: 30px;
+      transition: background 0.3s;
+    }
+    nav a.active,
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    main {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    section {
+      margin-bottom: 60px;
+      text-align: center;
+    }
+    section h2 {
+      font-size: 2rem;
+      color: #1e3a8a;
+      margin-bottom: 10px;
+    }
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    .card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      width: 280px;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h3 {
+      margin-top: 10px;
+      font-size: 1.3rem;
+      color: #1e3a8a;
+    }
+    .button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      background: linear-gradient(to right, #1e3a8a, #3b82f6);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .button:hover {
+      background: #1e40af;
+    }
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.1rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .footer {
+      background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MNP HOTELS</h1>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="rooms.html">Rooms</a>
+      <a href="dining.html">Dining</a>
+      <a href="amenities.html">Amenities</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="booking.html">Booking</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Welcome to MNP HOTELS</h2>
+      <p>
+        Discover premium stays in the world's most exciting destinations. Whether
+        you're traveling for business or leisure, MNP Hotels offer top-tier
+        accommodations, service, and amenities tailored for excellence.
+      </p>
+      <button class="button" onclick="bookStay()">Book Your Stay</button>
+    </section>
+
+    <section class="card-container">
+      <div class="card" onclick="location.href='booking.html'" style="cursor: pointer;">
+        <h3>Easy Booking</h3>
+        <p>Fast and simple online reservation system.</p>
+      </div>
+      <div class="card" onclick="location.href='rooms.html'" style="cursor: pointer;">
+        <h3>Luxury Rooms</h3>
+        <p>Spacious rooms with modern amenities and breathtaking views.</p>
+      </div>
+      <div class="card" onclick="location.href='locations.html'" style="cursor: pointer;">
+        <h3>Prime Locations</h3>
+        <p>Centrally located properties in top cities worldwide.</p>
+      </div>
+    </section>
+    
+
+    <section>
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <img src="https://images.pexels.com/photos/2034335/pexels-photo-2034335.jpeg" alt="Hotel Lobby" />
+        <img src="https://images.pexels.com/photos/262048/pexels-photo-262048.jpeg" alt="Room Interior" />
+        <img src="https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg" alt="Pool Area" />
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact Us</h2>
+      <div class="contact-info">
+        <div>📞 +91 9306248959</div>
+        <div>📍 Global Headquarters: Sonipat, HR</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    &copy; 2025 MNP HOTELS. All rights reserved.
+  </footer>
+
+  <script>
+    function bookStay() {
+      window.location.href = "booking.html";
+    }
+  </script>
+</body>
+</html>
