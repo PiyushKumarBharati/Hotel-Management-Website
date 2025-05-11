@@ -1,2 +1,2 @@
 # Hotel-Management-Website
-Hotel Mangement using javascript html and css
+Hotel Mangement using Javascript HTML and CSS
